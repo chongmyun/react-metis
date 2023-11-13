@@ -1,0 +1,351 @@
+article,aside,figcaption,figure,
+footer,header,nav,section,main{
+    display: block;
+    /* html5에서 Block Element로 바뀐 요소가 뭔지 알고 싶으면 구글에서 'html5 reset css' 검색, html5 reset stylesheet 들어가서
+    article, aside, detail...부분 참고. 이게 html5에서 인라인에서 블럭으로 바뀐 요소들.
+    details,hgroup,menu은 ie7,8에서 제대로 렌더링되므로 지워주자. main은 추가해주자. */
+
+}
+
+a:hover,
+a:focus,
+a{
+    text-decoration: none;
+    color: inherit;
+}
+button{
+    text-decoration: none;
+    background: none;
+    border: none;
+}
+fieldset{
+    margin: 0;
+    border: none;
+}
+h4{
+    margin: 0;
+}
+ul,ol{
+    padding: 0;
+    margin: 0;
+}
+li{
+    list-style: none;
+    text-decoration: none;
+}
+p{
+    margin: 0;
+}
+tr, th, td{
+    padding: 0;
+}
+
+img{
+    border: 0;
+}
+strong {font-weight:500;}
+em {font-style:normal;}
+
+select {
+    height:28px;
+    padding:0 0 0 8px;
+    border:1px solid #ccc;
+    vertical-align:middle;
+}
+input {vertical-align:middle;}
+input[type=button],
+input[type=submit]{
+    border:none;
+}
+input[type="text"]::-ms-clear {display:none;}
+input[type="password"]::-ms-reveal {display:none;}
+input[type="text"],
+input[type="tel"],
+input[type="password"],
+input[type="number"] {
+    height:28px;
+    padding:0 8px;
+    border:1px solid #ccc;
+}
+.readonly,
+textarea[disabled],
+input[readonly],
+input[disabled],
+select[disabled] {
+    background:#f5f5f5;
+    color:#aaa;
+}
+textarea {
+    max-width:100%;
+    padding:8px;
+    border:1px solid #ccc;
+}
+input[type="password"] {
+    letter-spacing: 0.3em;
+}
+
+.login-input{
+    background: none;
+    border:none !important;
+    width: calc(100% - 22px);
+    width: -webkit-calc(100% - 22px);
+    width: -moz-calc(100% - 22px);
+    height: 40px !important;
+    font-size:14px;
+    font-weight: 500;
+    margin-left:20px;
+    color:inherit;
+
+}
+
+.login-input:focus{
+    background: none;
+    outline: none;
+}
+
+.login-input ~ label {
+    position: absolute;
+    cursor:pointer;
+    top:10px;
+}
+
+.common-checkbox label {
+    position: relative;
+    margin: 0;
+    padding-left: 26px;
+    font-weight: 300;
+    cursor: pointer;
+}
+
+.common-checkbox label:before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 1px;
+    width: 18px;
+    height: 18px;
+    border: 1px solid #ccc;
+}
+
+.common-checkbox input[type="checkbox"] {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0,0,0,0);
+    border: 0;
+}
+
+.common-checkbox input[type="checkbox"]:checked + label:after {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 1px;
+    width: 18px;
+    height: 18px;
+    background: url(../../public/img/img_checkbox.png) no-repeat center;
+}
+
+.btn-login {
+    width: 100%;
+    height: 15%;
+    background: #88a740;
+    color: #ffffff;
+    font-size: 22px;
+    font-weight: 500;
+    text-align: center;
+}
+
+.main-grid{
+    display:grid;
+    height:100vh;
+    grid-template-rows: 60px ;
+}
+.item{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    font-size:1.2rem;
+    font-weight: 500;
+}
+
+.main-header{
+    position: fixed;
+    inset:0;
+    background: #443645;
+    width:100%;
+    height: 60px;
+    padding-left:48px;
+
+}
+.content{
+    display: grid;
+    grid-template-columns: 0.7fr 20fr;
+}
+
+.side-bar{
+    position: fixed;
+    left: 0;
+    top: 60px;
+    width: 48px;
+    height: 100vh;
+    min-height: 800px;
+    background: #443645;
+    z-index: 1001;
+    color: #efeeee;
+    transition: width 0.3s;
+    -webkit-transition: width 0.3s;
+    -moz-transition: width 0.3s;
+}
+
+.main-content{
+    width: calc(100% - 48px);
+    width: -webkit-calc(100% - 48px);
+    width: -moz-calc(100% - 48px);
+    margin-left: 48px;
+    margin-top:60px;
+    height: 93.8%;
+}
+
+.item-center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.side-book-mark-button{
+    padding-left:20px;
+    width: 100%;
+    height:60px;
+    color: #9f999f;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.book-mark-button{
+    width: 100%;
+    height:100px;
+    padding-left:0;
+    border-bottom: 1px solid #6e646f;
+    color: #9f999f;
+}
+
+.book-mark-wrap{
+    position: absolute;
+    top:0;
+    left: 48px;
+    width: 160px;
+    min-height: 99px;
+    margin: 0;
+    padding: 12px 20px;
+    border: none;
+    background-color: #382b38;
+}
+
+.profile_box {
+    position: relative;
+    display: table;
+    width: 100%;
+    height: 82px;
+    padding: 0;
+    border-top: 1px solid #6e646f;
+    border-bottom: 1px solid #6e646f;
+    background: #8fb201;
+}
+.profile_box .profile_detail_box {
+    display: table-cell;
+    padding: 0 20px;
+    vertical-align: middle;
+}
+.profile_box .profile_detail_box .user_name > button {
+    position: absolute;
+    top: 3px;
+    right: 0;
+    margin-left: 10px;
+    font-size: 0;
+    line-height: 0;
+}
+.profile_box .profile_popup_menu {
+    position: absolute;
+    top: 23px;
+    right: -45px;
+    width: 104px;
+    padding: 5px 0;
+    border: 2px solid #000;
+    background: #fff;
+    z-index: 100;
+}
+.profile_box .profile_popup_menu li {
+    display: flex;
+    align-items: center;
+    margin-left:10px;
+    line-height: 26px;
+    font-size: 13px;
+    color: #222;
+}
+
+.root_container {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    overflow: auto;
+    overflow-x: hidden;
+}
+
+
+/**/
+.item{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border:1px solid black;
+    font-size: 1.2rem;
+    font-weight:bold;
+}
+
+/**/
+@media (min-width:  640px) {
+    .dashboard-first-row{
+        grid-auto-rows: minmax(80px, auto);
+    }
+    .dashboard-second-row{
+        grid-auto-rows: minmax(150px, auto);
+    }
+    .dashboard-third-row{
+        grid-auto-rows: minmax(250px, auto);
+    }
+}
+
+@media (min-width: 768px) {
+    .dashboard-first-row{
+        grid-auto-rows: minmax(100px, auto);
+    }
+    .dashboard-second-row{
+        grid-auto-rows: minmax(200px, auto);
+    }
+    .dashboard-third-row{
+        grid-auto-rows: minmax(300px, auto);
+    }
+}
+
+@media (min-width: 1280px) {
+    .dashboard-first-row{
+        grid-auto-rows: minmax(150px, auto);
+    }
+    .dashboard-second-row{
+        grid-auto-rows: minmax(260px, auto);
+    }
+    .dashboard-third-row{
+        grid-auto-rows: minmax(360px, auto);
+    }
+
+}
+
+.header-right-tab li{
+    margin: 0 6px;
+}
+
+
+
